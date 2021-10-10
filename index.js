@@ -23,24 +23,6 @@ const questioningBegins = () => {
             message: " Provide instructions for use",
             name: "usage"
         },
-        // {
-        //     type: "confirm",
-        //     name: 'confirmScreenShot',
-        //     message: " Would you like to add screenshots?",
-        //     default: false
-        // },
-        // {
-        //     type: 'input',
-        //     name: 'screenShot',
-        //     message: 'Enter the path to your screenshots',
-        //     when: ({ confirmScreenShot }) => {
-        //         if (confirmScreenShot) {
-        //             return true;
-        //         } else {
-        //             return false;
-        //         }
-        //     }
-        // },
         {
             type: "list",
             name: "license",
@@ -132,8 +114,8 @@ ${obj.tests}
 
 ## Questions
 
-GitHub: ${obj.github}
-Email: ${obj.email}
+GitHub: https://github.com/${obj.github}
+\nEmail: ${obj.email}
 `
 
     fs.writeFileSync('README.md', syntax)

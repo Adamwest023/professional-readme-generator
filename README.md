@@ -1,8 +1,8 @@
-# Adam [![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
+# Adam [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
 
-ADam
+Adam
 
 ## Table of Contents
 
@@ -14,16 +14,16 @@ ADam
 
 ## Installation
 
-adam
+Adam
 
 
 ## Usage
 
-adam
+Adam
 
 ## License
 
-This project has a: Boost
+This project has a: MIT
 
 
 ## Contributing
@@ -32,9 +32,10 @@ false
 
 ## Tests 
 
-adam
+N/A
 
 ## Questions
 
-GitHub: adam
-Email: adam
+GitHub: https://github.com/adamwest023
+
+Email: adamwest023@gmail.com
