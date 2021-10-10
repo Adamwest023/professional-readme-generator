@@ -42,9 +42,9 @@ const questioningBegins = () => {
         //     }
         // },
         {
-            type:"checkbox",
+            type: "list",
             name: "license",
-            message:" Choose a license",
+            message: " Choose a license",
             choices: ["No License", "MIT", "GNU", "Mozilla", "Apache", "Boost", "The Unlicense"]
         },
         {
@@ -54,14 +54,19 @@ const questioningBegins = () => {
             default: false
         },
         {
-          type: "input",
-          name: "tests",
-          message: "Provide any tests you ran on your application",
+            type: "input",
+            name: "tests",
+            message: "Provide any tests you ran on your application",
         },
         {
             type: "input",
             name: "github",
             message: "Enter your GitHub profile"
+        },
+        {
+            type: "input",
+            name: "email",
+            message: "What is your email?"
         }
     ]).then(answers => {
         console.log(answers)
@@ -70,7 +75,26 @@ const questioningBegins = () => {
 }
 
 function createReadme(obj) {
-    const syntax = `# ${obj.title}
+    let licenseChosen = "No license Chosen"
+    if (obj.license === "MIT") {
+        licenseChosen = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)"
+    }
+    if (obj.license === "GNU") {
+        licenseChosen = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)"
+    }
+    if (obj.license === "Mozilla") {
+        licenseChosen = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)"
+    }
+    if (obj.license === "Apache") {
+        licenseChosen = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+    }
+    if (obj.license === "Boost") {
+        licenseChosen = "[![License](https://img.shields.io/badge/License-Boost%201.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)"
+    }
+    if (obj.license === "The Unlicense") {
+        licenseChosen = "[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)"
+    }
+    const syntax = `# ${obj.title} ${licenseChosen}
 
 ## Description 
 
@@ -80,6 +104,9 @@ ${obj.description}
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [License](#license)
+* [Contributing](#contributing)
+* [Tests](#test)
 
 ## Installation
 
@@ -89,9 +116,9 @@ ${obj.installation}
 ## Usage
 
 ${obj.usage}
-// ${obj.screenShot}
 
 ## License
+
 This project has a: ${obj.license}
 
 
@@ -103,6 +130,10 @@ ${obj.contributing}
 
 ${obj.tests}
 
+## Questions
+
+GitHub: ${obj.github}
+Email: ${obj.email}
 `
 
     fs.writeFileSync('README.md', syntax)
