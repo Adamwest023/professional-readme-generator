@@ -1,41 +1,19 @@
-# Adam [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Professional Readme Generator
 
 ## Description 
 
-Adam
+A node program that will create a README file based on prompts given
 
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [License](#license)
-* [Contributing](#contributing)
-* [Tests](#test)
 
 ## Installation
 
-Adam
+Copy code from github and run npm install for packages
 
 
-## Usage
+## Usage 
 
-Adam
+Once installed run node index to run prompts. Based on prompts given there will be a README file created. 
 
-## License
-
-This project has a: MIT
+![walkthrough video](assets/Readmewalkthrough.mov)
 
 
-## Contributing
-
-false
-
-## Tests 
-
-N/A
-
-## Questions
-
-GitHub: https://github.com/adamwest023
-
-Email: adamwest023@gmail.com
